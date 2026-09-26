@@ -23,10 +23,21 @@
 
 
 
-total_seconds = int(input("Введите количество секунд: "))
+# total_seconds = int(input("Введите количество секунд: "))
 
-hours = total_seconds // 3600
-minutes = (total_seconds % 3600) // 60
-seconds = total_seconds % 60
+# hours = total_seconds // 3600
+# minutes = (total_seconds % 3600) // 60
+# seconds = total_seconds % 60
 
-print(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
+# print(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
+
+
+
+text = input("Введите строку: ")
+
+print(f"Длина: {len(text)}")
+print(f"Верхний регистр: {text.upper()}")
+print(f"Нижний регистр: {text.lower()}")
+print(f"Первый символ: {text[0]}")
+print(f"Последний символ: {text[-1]}")
+print(f"Количество пробелов: {text.count(' ')}")
