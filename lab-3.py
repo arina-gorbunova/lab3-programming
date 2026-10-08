@@ -59,19 +59,51 @@
 
 
 
-print("Конвертер температур")
-print("1. Из °C в °F")
-print("2. Из °F в °C")
+# print("Конвертер температур")
+# print("1. Из °C в °F")
+# print("2. Из °F в °C")
 
-choice = input("Ваш выбор (1/2): ")
+# choice = input("Ваш выбор (1/2): ")
 
-if choice == "1":
-    celsius = float(input("Введите температуру в °C: "))
-    fahrenheit = celsius * 9/5 + 32
-    print(f"{celsius:.1f}°C = {fahrenheit:.1f}°F")
-elif choice == "2":
-    fahrenheit = float(input("Введите температуру в °F: "))
-    celsius = (fahrenheit - 32) * 5/9
-    print(f"{fahrenheit:.1f}°F = {celsius:.1f}°C")
-else:
-    print("Некорректный выбор") 
+# if choice == "1":
+#     celsius = float(input("Введите температуру в °C: "))
+#     fahrenheit = celsius * 9/5 + 32
+#     print(f"{celsius:.1f}°C = {fahrenheit:.1f}°F")
+# elif choice == "2":
+#     fahrenheit = float(input("Введите температуру в °F: "))
+#     celsius = (fahrenheit - 32) * 5/9
+#     print(f"{fahrenheit:.1f}°F = {celsius:.1f}°C")
+# else:
+#     print("Некорректный выбор") 
+
+
+
+def tobinary(num_10):
+    num_10 = abs(num_10) # работаем с модулем, чтобы обрабатывать и отрицательные числа
+    if num_10 == 0:
+        return "0"
+    num_2 = ""
+    while num_10 != 0:
+        ost = str(num_10 % 2) # остаток от деления(0 или 1)
+        num_2 = ost + num_2 # приписываем слева
+        num_10 //= 2 # целочисленно делим число
+    return num_2
+
+def main():
+    try:
+        num_10 = int(input("Введите число в 10 сс:")) # запрос ввода числа в 10-тичной сс
+
+        # ЧЕРЕЗ ФУНКЦИЮ bin()
+        num_2bin = bin(num_10)[2:] # [2:] нужен, чтобы убрать префикс '0b'
+
+        # ВРУЧНУЮ
+        num_2 = tobinary(num_10)
+
+        # ВЫВОДЫ
+        print(f"Десятичное число {num_10} в двоичной сс равно {num_2bin}(через функцию bin)")
+        print(f"Десятичное число {num_10} в двоичной сс равно {num_2}(вручную)")
+
+    except ValueError:
+        print("Ошибка: нужно ввести именно целое число!!!!")
+if __name__ == "__main__":
+    main()
