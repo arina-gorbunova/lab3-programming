@@ -28,25 +28,40 @@
 #     print(f"число {number} - ноль")
 
 
+# #задание 2
+# a = float(input("Введите перове число: "))
+# b = float(input("Введите второе число: "))
+# c = float(input("Введите третье число: "))
 
-#задание 2
-a = float(input("Введите перове число: "))
-b = float(input("Введите второе число: "))
-c = float(input("Введите третье число: "))
+# if a >= b and a >= c:
+#     maximum = a
+# elif b >= a and b >= c:
+#     maximum = b
+# else:
+#     maximum = c
 
-if a >= b and a >= c:
-    maximum = a
-elif b >= a and b >= c:
-    maximum = b
+# print(f"Максимум: {maximum}")
+
+
+# #через функцию max()
+# a = float(input("Введите перове число: "))
+# b = float(input("Введите второе число: "))
+# c = float(input("Введите третье число: "))
+
+# print(f"Максимум: {max(a, b, c)}")
+
+
+#задание 3
+age = int(input('Введите возраст: '))
+
+if age < 0:
+    print('Некорректный возраст')
+elif age <= 12:
+    print("Ребенок")
+elif age <= 17:
+    print("Подросток")
+elif age <= 64:
+    print("Взрослый")
 else:
-    maximum = c
-
-print(f"Максимум: {maximum}")
-
-
-#через функцию max()
-a = float(input("Введите перове число: "))
-b = float(input("Введите второе число: "))
-c = float(input("Введите третье число: "))
-
-print(f"Максимум: {max(a, b, c)}")
+    print("Пожилой")
+    
