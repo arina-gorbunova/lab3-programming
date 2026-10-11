@@ -51,17 +51,40 @@
 # print(f"Максимум: {max(a, b, c)}")
 
 
-#задание 3
-age = int(input('Введите возраст: '))
+# #задание 3
+# age = int(input('Введите возраст: '))
 
-if age < 0:
-    print('Некорректный возраст')
-elif age <= 12:
-    print("Ребенок")
-elif age <= 17:
-    print("Подросток")
-elif age <= 64:
-    print("Взрослый")
+# if age < 0:
+#     print('Некорректный возраст')
+# elif age <= 12:
+#     print("Ребенок")
+# elif age <= 17:
+#     print("Подросток")
+# elif age <= 64:
+#     print("Взрослый")
+# else:
+#     print("Пожилой")
+
+
+
+#задание 4
+import math
+
+a = float(input("Введите a: "))
+b = float(input("Введите b: "))
+c = float(input("Введите c: "))
+
+if a == 0:
+    print("Это не квадратное уравнение")
 else:
-    print("Пожилой")
-    
+    D = b**2 - 4*a*c
+
+if D > 0:
+    x1 = (-b + math.sqrt(D)) / 2*a
+    x2 = (-b - math.sqrt(D)) / 2*a
+    print(f"Два корня: x1 = {x1:.2f}, x2 = {x2:.2f}")
+elif D == 0:
+    x = -b/2*a
+    print(f"Один корень: x = {x:.2f}")
+else:
+    print("Нет действительных корней")
