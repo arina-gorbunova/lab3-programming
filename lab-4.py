@@ -67,24 +67,46 @@
 
 
 
-#задание 4
-import math
+# #задание 4
+# import math
 
-a = float(input("Введите a: "))
-b = float(input("Введите b: "))
-c = float(input("Введите c: "))
+# a = float(input("Введите a: "))
+# b = float(input("Введите b: "))
+# c = float(input("Введите c: "))
 
-if a == 0:
-    print("Это не квадратное уравнение")
-else:
-    D = b**2 - 4*a*c
+# if a == 0:
+#     print("Это не квадратное уравнение")
+# else:
+#     D = b**2 - 4*a*c
 
-if D > 0:
-    x1 = (-b + math.sqrt(D)) / 2*a
-    x2 = (-b - math.sqrt(D)) / 2*a
-    print(f"Два корня: x1 = {x1:.2f}, x2 = {x2:.2f}")
-elif D == 0:
-    x = -b/2*a
-    print(f"Один корень: x = {x:.2f}")
-else:
-    print("Нет действительных корней")
+# if D > 0:
+#     x1 = (-b + math.sqrt(D)) / 2*a
+#     x2 = (-b - math.sqrt(D)) / 2*a
+#     print(f"Два корня: x1 = {x1:.2f}, x2 = {x2:.2f}")
+# elif D == 0:
+#     x = -b/2*a
+#     print(f"Один корень: x = {x:.2f}")
+# else:
+#     print("Нет действительных корней")
+
+
+
+#задание 5
+a = float(input("Ваедите первое число: "))
+b = float(input("Ваедите второе число: "))
+operation = input("Введите операцию (+, -, *, /): ").strip()
+
+match operation:
+    case "+":
+        print(f"Результат: {a + b}")
+    case "-":
+        print(f"Результат: {a - b}")
+    case "*":
+        print(f"Результат: {a * b}")
+    case "/":
+        if b == 0:
+            print("Ошибка: деление на ноль!")
+        else:
+            print(f"Результат: {a / b:.2f}")
+    case _:
+        print("Неизвестная операция")
