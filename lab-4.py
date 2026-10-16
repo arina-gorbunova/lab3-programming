@@ -112,11 +112,28 @@
 #         print("Неизвестная операция")
 
 
-#задание 6
-year = int(input("Введите год: "))
+# #задание 6
+# year = int(input("Введите год: "))
 
-if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-    print(f"{year} - високосный год")
+# if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+#     print(f"{year} - високосный год")
+# else:
+#     print(f"{year} - не високосный год")
+
+
+
+
+#задание 7
+a = float(input("Введите сторону a: "))
+b = float(input("Введите сторону b: "))
+c = float(input("Введите сторону c: "))
+
+if a + b > c and a + c > b and b + c > a:
+    if a == b == c:
+        print("Равносторонний треугольник")
+    elif a == b or b == c or a == c:
+        print("Равнобедренный треугольник")
+    else:
+        print("Разносторонний треугольник")
 else:
-    print(f"{year} - не високосный год")
-
+    print("Треугольник не существует")
